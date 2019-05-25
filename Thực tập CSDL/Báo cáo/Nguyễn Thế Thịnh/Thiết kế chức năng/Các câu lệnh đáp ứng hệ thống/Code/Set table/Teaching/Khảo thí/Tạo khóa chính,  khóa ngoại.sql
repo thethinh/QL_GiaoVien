@@ -1,0 +1,8 @@
+Alter table ChamThi add constraint ChamThi_GV foreign key (MaGV) references GiaoVien (MaGV)
+Alter table ChamThi add constraint ChamThi_LpThiHP foreign key (MaLopThiHP) references LopThiHP (MaLopThiHP)
+Alter table LopThiHP add constraint LpThiHP_HTthi foreign key (MaHinhThucThi) references HinhThucThi (MaHinhThucThi)
+Alter table ToChucThiHP add constraint TCthiHP_LpHP foreign key (MaLopHP) references LopHP(MaLopHP)
+Alter table ToChucThiHP add constraint TCthiHP_LpThiHp foreign key (MalopThiHP) references LopThiHP(MaLopThiHP)
+Alter table DMChamThi add constraint DMCThi_HTthi foreign key (MaHinhThucThi) references HinhThucThi(MaHinhThucThi)
+Alter table DMchamBTL add constraint DMChamBTL_LoaiBTL foreign key(MaLoaiBTL) references LoaiBTL (MaLoaiBTL)
+Alter table DMchamDT add constraint DMchamDT_LoaiDT foreign key (MaLoaiDT) references LoaiDT (MaLoaiDT)
